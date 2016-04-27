@@ -9,8 +9,8 @@ import (
 )
 
 type Timestamp struct {
-	Time   string
-	Source string
+	Time   string `json:"time"`
+	Source string `json:"source"`
 }
 
 func main() {
