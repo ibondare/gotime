@@ -14,13 +14,8 @@ type Timestamp struct {
 }
 
 func main() {
-	http.HandleFunc("/", homeHandler)
 	http.HandleFunc("/time/", timeHandler)
 	http.ListenAndServe(":8080", nil)
-}
-
-func homeHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Instead of %s %s, try GET /time", r.Method, r.URL)
 }
 
 func timeHandler(w http.ResponseWriter, r *http.Request) {
